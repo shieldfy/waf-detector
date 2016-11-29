@@ -84,6 +84,6 @@ If you discover a security vulnerability within this project, please send an e-m
 
 ## License
 
-This software is released under [GNU GENERAL PUBLIC LICENSE](LICENSE).
+This software is released under [MIT LICENSE](LICENSE).
 
 (c) 2016 Shieldfy, Some rights reserved.
