@@ -7,28 +7,27 @@
  *
  * The applied license is stored at the root directory of this package.
  */
-
 namespace Shieldfy\Firewall;
-
 
 use Shieldfy\FirewallInterface;
 
 /**
- * Incapsula Firewall Class
+ * Incapsula Firewall Class.
  *
  * @package shieldfy.waf-detector
+ *
  * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 class Incapsula implements FirewallInterface
 {
     /**
-     * returns the name of the firewall
+     * returns the name of the firewall.
      *
      * @return string
      */
     public function getName()
     {
-        return "Incapsula";
+        return 'Incapsula';
     }
 
     /**
@@ -44,5 +43,4 @@ class Incapsula implements FirewallInterface
     {
         return array_key_exists('x-cdn', $headers) && strtolower($headers['x-cdn']) === 'incapsula';
     }
-
 }
