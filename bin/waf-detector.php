@@ -32,7 +32,7 @@ $firewalls = [
 
 // bootstrap
 
-set_exception_handler(function(Exception $exception) {
+set_exception_handler(function (Exception $exception) {
     $output = [
         '',
         sprintf('%s:', get_class($exception)),
@@ -59,8 +59,8 @@ echo <<<ASCIIART
 (c) 2016 Matthias "Nihylum" Kaschubowski
 ASCIIART;
 
-if ( ! isset($argv[1]) || ( isset($argv[1]) && $argv[1] === 'help' ) ) {
-    $help= [
+if (! isset($argv[1]) || (isset($argv[1]) && $argv[1] === 'help')) {
+    $help = [
         '',
         'Usage:',
         '',
@@ -69,11 +69,10 @@ if ( ! isset($argv[1]) || ( isset($argv[1]) && $argv[1] === 'help' ) ) {
     ];
 
     echo PHP_EOL.join(PHP_EOL, $help).PHP_EOL;
-}
-else {
+} else {
     echo PHP_EOL.PHP_EOL.'Checking: '.$argv[1].PHP_EOL;
 
-    foreach ( $detector->detect($argv[1]) as $firewall => $result ) {
+    foreach ($detector->detect($argv[1]) as $firewall => $result) {
         echo PHP_EOL."- {$firewall} ... ".($result ? 'enabled' : 'disabled');
     }
 

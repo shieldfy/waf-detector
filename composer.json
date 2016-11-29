@@ -1,23 +1,52 @@
 {
-  "name": "shieldfy/waf-detector",
-  "description": "SHIELDFY Web Application Firewall Detector Component",
-  "authors": [
-    {
-      "name":"SHIELDFY Security Team",
-      "role":"maintainer"
+    "name": "shieldfy/waf-detector",
+    "description": "This is a simple package for Web Application Firewall Detection. It supports CloudFlare, Incapsula, ModSecurity, and Shieldfy out of the box.",
+    "keywords": [
+        "modsecurity",
+        "cloudflare",
+        "incapsula",
+        "shieldfy",
+        "security",
+        "firewall",
+        "detection",
+        "application"
+    ],
+    "authors": [
+        {
+            "name": "SHIELDFY Security Team",
+            "homepage": "https://shieldfy.com",
+            "email": "team@shieldfy.com"
+        },
+        {
+            "name": "Eslam Salem",
+            "homepage": "http://netcode.me",
+            "email": "eslam@netcode.me",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Matthias Kaschubowski",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
     },
-    {
-      "name":"Matthias Kaschubowski",
-      "role":"developer"
-    }
-  ],
-  "require": {
-    "php": ">=5.6.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Shieldfy\\": "./src"
-    }
-  },
-  "bin": ["bin/waf-detector.php"]
+    "autoload": {
+        "psr-4": {
+            "Shieldfy\\": "./src"
+        }
+    },
+    "bin": [
+        "bin/waf-detector.php"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

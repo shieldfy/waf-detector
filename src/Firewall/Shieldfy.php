@@ -18,7 +18,7 @@ use Shieldfy\FirewallInterface;
  * Shieldfy Firewall Class
  *
  * @package shieldfy.waf-detector
- * @author Matthias Kaschubowski <nihylum@gmail.com>
+ * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 class Shieldfy implements FirewallInterface
 {
@@ -36,8 +36,9 @@ class Shieldfy implements FirewallInterface
      * detects whether the provided headers and body string does match the firewall identification rules or not.
      *
      * @param string[] $headers
-     * @param string $bodyString
-     * @param string $url
+     * @param string   $bodyString
+     * @param string   $url
+     *
      * @return bool
      */
     public function detect(array $headers, $bodyString, $url)

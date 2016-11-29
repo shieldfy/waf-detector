@@ -18,8 +18,8 @@ use Shieldfy\FirewallInterface;
  *
  * @deprecated The checkup does suffer from inconsistency, high fake possibility
  *
- * @package shieldfy.waf-detector
- * @author Matthias Kaschubowski <nihylum@gmail.com>
+ * @package    shieldfy.waf-detector
+ * @author     Matthias Kaschubowski <nihylum@gmail.com>
  */
 class ModSecurity implements FirewallInterface
 {
@@ -37,15 +37,16 @@ class ModSecurity implements FirewallInterface
      * detects whether the provided headers and body string does match the firewall identification rules or not.
      *
      * @param string[] $headers
-     * @param string $bodyString
-     * @param string $url
+     * @param string   $bodyString
+     * @param string   $url
+     *
      * @return bool
      */
     public function detect(array $headers, $bodyString, $url)
     {
         $response = @ file_get_contents("{$url}/../../etc");
 
-        if ( strstr($response['content'], 'Mod_Security') ) {
+        if (strstr($response['content'], 'Mod_Security')) {
             return true;
         }
 
