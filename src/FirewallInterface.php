@@ -7,19 +7,19 @@
  *
  * The applied license is stored at the root directory of this package.
  */
-
 namespace Shieldfy;
 
 /**
- * General Firewall Interface
+ * General Firewall Interface.
  *
  * @package shieldfy.waf-detector
+ *
  * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 interface FirewallInterface
 {
     /**
-     * returns the name of the firewall
+     * returns the name of the firewall.
      *
      * @return string
      */

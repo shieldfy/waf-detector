@@ -7,23 +7,21 @@
  *
  * The applied license is stored at the root directory of this package.
  */
-
 namespace Shieldfy\Firewall;
-
 
 use Shieldfy\FirewallInterface;
 
-
 /**
- * Shieldfy Firewall Class
+ * Shieldfy Firewall Class.
  *
  * @package shieldfy.waf-detector
+ *
  * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 class Shieldfy implements FirewallInterface
 {
     /**
-     * returns the name of the firewall
+     * returns the name of the firewall.
      *
      * @return string
      */
@@ -45,5 +43,4 @@ class Shieldfy implements FirewallInterface
     {
         return array_key_exists('x-web-shield', $headers) && $headers['x-web-shield'] === 'ShieldfyWebShield';
     }
-
 }

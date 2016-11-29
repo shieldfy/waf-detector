@@ -7,23 +7,21 @@
  *
  * The applied license is stored at the root directory of this package.
  */
-
 namespace Shieldfy\Firewall;
-
 
 use Shieldfy\FirewallInterface;
 
-
 /**
- * CloudFlare Firewall Class
+ * CloudFlare Firewall Class.
  *
  * @package shieldfy.waf-detector
+ *
  * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 class CloudFlare implements FirewallInterface
 {
     /**
-     * returns the name of the firewall
+     * returns the name of the firewall.
      *
      * @return string
      */
@@ -53,5 +51,4 @@ class CloudFlare implements FirewallInterface
 
         return false;
     }
-
 }

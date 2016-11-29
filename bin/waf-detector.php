@@ -40,10 +40,10 @@ set_exception_handler(function (Exception $exception) {
         '',
     ];
 
-    echo PHP_EOL.join(PHP_EOL, $output).PHP_EOL;
+    echo PHP_EOL.implode(PHP_EOL, $output).PHP_EOL;
 });
 
-$detector = new \Shieldfy\Detector(... $firewalls);
+$detector = new \Shieldfy\Detector(...$firewalls);
 
 echo <<<ASCIIART
   |`-._/\_.-`|
@@ -68,7 +68,7 @@ if (! isset($argv[1]) || (isset($argv[1]) && $argv[1] === 'help')) {
         '',
     ];
 
-    echo PHP_EOL.join(PHP_EOL, $help).PHP_EOL;
+    echo PHP_EOL.implode(PHP_EOL, $help).PHP_EOL;
 } else {
     echo PHP_EOL.PHP_EOL.'Checking: '.$argv[1].PHP_EOL;
 

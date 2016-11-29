@@ -7,29 +7,28 @@
  *
  * The applied license is stored at the root directory of this package.
  */
-
 namespace Shieldfy;
-
 
 use Shieldfy\Exception\InvalidUrlException;
 
 /**
- * Detector Class
+ * Detector Class.
  *
  * @package shieldfy.waf-detector
+ *
  * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 class Detector
 {
     /**
-     * Holds all firewall identification interfaces
+     * Holds all firewall identification interfaces.
      *
      * @var FirewallInterface[]
      */
     protected $firewalls = [];
 
     /**
-     * holds the general cURL settings
+     * holds the general cURL settings.
      *
      * @var array
      */
@@ -48,7 +47,7 @@ class Detector
      *
      * @param FirewallInterface[] ...$firewalls
      */
-    public function __construct(FirewallInterface ... $firewalls)
+    public function __construct(FirewallInterface ...$firewalls)
     {
         $this->firewalls = $firewalls;
     }

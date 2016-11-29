@@ -5,11 +5,8 @@
  *
  * The applied license is stored at the root directory of this package.
  */
-
 namespace Shieldfy\Exception;
-
 
 class InvalidUrlException extends \LogicException
 {
-
 }
