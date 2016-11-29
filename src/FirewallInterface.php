@@ -14,7 +14,7 @@ namespace Shieldfy;
  * General Firewall Interface
  *
  * @package shieldfy.waf-detector
- * @author Matthias Kaschubowski <nihylum@gmail.com>
+ * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 interface FirewallInterface
 {
@@ -29,8 +29,9 @@ interface FirewallInterface
      * detects whether the provided headers and body string does match the firewall identification rules or not.
      *
      * @param string[] $headers
-     * @param string $bodyString
-     * @param string $url
+     * @param string   $bodyString
+     * @param string   $url
+     *
      * @return bool
      */
     public function detect(array $headers, $bodyString, $url);

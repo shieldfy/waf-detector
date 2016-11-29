@@ -1,1 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
+/vendor
+/node_modules
+composer.phar
+composer.lock

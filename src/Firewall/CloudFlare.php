@@ -18,7 +18,7 @@ use Shieldfy\FirewallInterface;
  * CloudFlare Firewall Class
  *
  * @package shieldfy.waf-detector
- * @author Matthias Kaschubowski <nihylum@gmail.com>
+ * @author  Matthias Kaschubowski <nihylum@gmail.com>
  */
 class CloudFlare implements FirewallInterface
 {
@@ -36,17 +36,18 @@ class CloudFlare implements FirewallInterface
      * detects whether the provided headers and body string does match the firewall identification rules or not.
      *
      * @param string[] $headers
-     * @param string $bodyString
-     * @param string $url
+     * @param string   $bodyString
+     * @param string   $url
+     *
      * @return bool
      */
     public function detect(array $headers, $bodyString, $url)
     {
-        if ( array_key_exists('server', $headers) && strtolower($headers['server']) === 'cloudflare-nginx' ) {
+        if (array_key_exists('server', $headers) && strtolower($headers['server']) === 'cloudflare-nginx') {
             return true;
         }
 
-        if ( array_key_exists('cf-ray', $headers) ) {
+        if (array_key_exists('cf-ray', $headers)) {
             return true;
         }
 
